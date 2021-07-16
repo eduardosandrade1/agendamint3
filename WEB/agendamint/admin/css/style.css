@@ -1,0 +1,76 @@
+:root{
+    --font-text: 'Girassol', cursive;
+
+}
+
+body{
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p{
+    font-family: var(--font-text);
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.frm_login{
+    width: 530px;
+    margin: 130px auto;
+    height: 100px;
+}
+.btn-entrar{
+    margin-top: 8px;
+    width: 100%;
+}
+#corpo{
+    display: flex;
+    height: 100vh;
+}
+#esquerdo{
+    left: 0;
+    width: 260px;
+    height: 100%;
+    background-color: var(--blue);
+    color: white;
+    padding-top: 50px;
+
+}
+#esquerdo a{
+    color: white;
+}
+/* #esquerdo a:active{
+    background-color: ;
+} */
+#esquerdo ul li{
+    align-items: center;
+}
+#direito{
+    right: 0;
+    width: 100%;
+}
+#direito .content{
+    padding: 10px;
+}
+.menu-topo{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+    background-color: #212529;
+}
+.menu-topo a{
+    margin-right: 20px;
+    color: white;
+}
+.link-sidebar{
+    padding-left: 20px;
+}
+#sessao{
+    padding-left: 20px;
+}
+.back-login{
+    padding: 10px;
+}
