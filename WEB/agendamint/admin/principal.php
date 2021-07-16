@@ -47,11 +47,12 @@
                     <?php
                         if(isset($_GET['link'])){
                             $link = $_GET['link'];
+                            $pag[404]="../404.php";
                             $pag[1]="dashboard.php";
                             $pag[2]="frm_user.php";
                             $pag[3]="frm_funcionarios.php";
-                            $pag[4]="frm_post.php";
-                            $pag[5]="lista_post.php";
+                            $pag[4]="frm_agenda.php";
+                            $pag[5]="frm_servico.php";
                             $pag[6]="frm_noticia.php";
                             $pag[7]="lista_noticia.php";
                             $pag[8]="frm_administrador.php";

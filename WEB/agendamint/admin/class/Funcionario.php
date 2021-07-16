@@ -14,12 +14,20 @@
         }
         /**
          * RETORNA UM FUNCIONÁRIO ESPECÍFICO
-         * @return BOOL 
+         * @return array 
          */
         public function getSpecificFuncionario($user, $senha_)
         {
             $sql  = new Sql();
-            return $sql->select("SELECT * FROM funcionarios where login = :login and senha = :senha", array(':login' => $user, ':senha' => $senha_));
+            $funcionarioLogin = $sql->select("SELECT * FROM funcionarios where login = :login and senha = :senha", array(':login' => $user, ':senha' => $senha_));
+            // PEGA FUNCIONARIOS DE EMPRESAS ATIVAS/CONFIGURADAS
+            if(count($funcionarioLogin) > 0){
+                $empresa        = new Empresa();
+                $statusEmpresa  = $empresa->getById($funcionarioLogin[0]['empresa_id']);
+                if($statusEmpresa[0]['nova'] == 0){
+                    return $funcionarioLogin;
+                }
+            }
         }
 
         public function getAll()

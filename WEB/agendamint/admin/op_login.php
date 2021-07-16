@@ -13,6 +13,7 @@
     // die;
     if(count($users) > 0){
         $_SESSION['logado']         = true;
+        $_SESSION['user_id']        = $users[0]['id'];
         $_SESSION['nome']           = $users[0]['nome'];
         $_SESSION['nivel_acesso']   = $users[0]['nivel_acesso_id'];
         $_SESSION['empresa_id']     = $users[0]['empresa_id'];

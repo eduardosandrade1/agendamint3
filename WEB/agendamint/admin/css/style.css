@@ -53,6 +53,12 @@ li{
 #direito .content{
     padding: 10px;
 }
+.content-cards{
+    display: flex;
+}
+.content-cards .card{
+    margin: 10px;
+}
 .menu-topo{
     width: 100%;
     display: flex;
@@ -73,4 +79,12 @@ li{
 }
 .back-login{
     padding: 10px;
+}
+.panel-body{
+    max-width: 100%;
+    height: 700px;
+    overflow: scroll;
+}
+.panel-body thead{
+    position: relative;
 }

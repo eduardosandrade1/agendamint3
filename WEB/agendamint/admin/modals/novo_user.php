@@ -9,30 +9,52 @@
       </div>
       <div class="modal-body">
         <form action="op_user.php" method="post">
+          <!-- Nome do usuário -->
             <div class="form-group">
                 <label for="recipient-name" class="col-form-label">Nome:</label>
                 <input type="text" class="form-control" name="name-new-user" required>
             </div>
+            <!-- usuário/login do usuário -->
             <div class="form-group">
                 <label for="message-text" class="col-form-label">Usuario:</label>
                 <input class="form-control" name="user-new-user" required>
             </div>
+            <!-- email -->
             <div class="form-group">
                 <label for="message-text" class="col-form-label">Email:</label>
                 <input class="form-control" name="email-new-user" required>
             </div>
-            <div class="form-group">
-                <label for="message-text" class="col-form-label">Data para agendamento:</label>
-                <input type="datetime-local" class="form-control" name="email-new-user" required>
-            </div>
+            <!-- senha -->
             <div class="form-group">
                 <label for="message-text" class="col-form-label">Senha:</label>
                 <input type="password" class="form-control" name="senha-new-user" required>
-            </div>            
+            </div>    
+            <!-- repetição de senha          -->
             <div class="form-group">
                 <label for="message-text" class="col-form-label">Repita senha:</label>
                 <input type="password" class="form-control" name="senha-repita-new-user" required>
             </div>
+            <!-- opção de serviço -->
+            <div class="form-group">
+              <label for="message-text" class="col-form-label"></label>
+              <select name="servico-new-user" class="form-control">
+                <?php foreach ($servicos as $s => $serv) {?>
+                  <option value="<?= $serv['id'] ?>"><?= $serv['descricao'] ?></option>
+                <?php } ?>
+              </select>
+            </div>
+          <!-- data agendamento -->
+            <div class="row">
+              <div class="col">
+                <label for="message-text" class="col-form-label">Dia para agendamento:</label>
+                <input type="date" class="form-control" name="dia-new-user" required>
+              </div>
+              <div class="col">
+                <label for="message-text" class="col-form-label">Horário:</label>
+                <input type="time" class="form-control" name="hora-new-user" required>
+              </div>
+            </div>
+            <!-- send the form -->
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>

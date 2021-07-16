@@ -1,8 +1,10 @@
 <?php 
-    $usr = new User();
-    $users = $usr->getAll();
+    $usr        = new User();
+    $users      = $usr->getAll();
+    $servico    = new Servico();
+    $servicos   = $servico->getByCompany($_SESSION['empresa_id']);
 ?>
-<h1>Usuários</h1>
+<h1 class="text-center">Usuários</h1>
 <div class="panel panel-default">
     <div class="panel-heading text-center bg-secondary">
         <div class="h4 text-light">Lista de usuários</div>

@@ -22,7 +22,7 @@
             $cmd->bindParam($key, $value);
         }
         
-        public function query($querySql, $param = array())
+        public function query($querySql, $param = array(), $returnId = null)
         {
             # prepara a query 
             $cmd = $this->connection->prepare($querySql);
@@ -30,6 +30,11 @@
             $this->setParams($cmd, $param);
             # retorna a execução da query
             $cmd->execute();
+            // retornando id
+            if($returnId != null){
+                $cmd = $this->connection->lastInsertId();
+                return $cmd;
+            }
             return $cmd;
         }
 
@@ -42,6 +47,12 @@
         public function insert($querySql, $param = array())
         {
             $cmd = $this->query($querySql, $param);
+            return $cmd;
+        }
+
+        public function insertGetId($querySql, $param = array())
+        {
+            $cmd = $this->query($querySql, $param, true);
             return $cmd;
         }
     }
