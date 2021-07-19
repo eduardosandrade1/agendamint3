@@ -62,7 +62,7 @@
                     Funcionários
                 </div>
                 <div class="card-body text-center">
-                    <label><?= $qtdFuncionario ?></label>
+                    <label class="h3"><?= $qtdFuncionario ?></label>
                 </div>
                 <div class="card-footer text-center">
                     <a href="principal.php?link=3" class="btn btn-danger">Acessar</a>

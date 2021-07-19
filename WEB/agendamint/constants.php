@@ -9,4 +9,5 @@ define ('PASS_DB','usbw');
 define ('USER_MASTER', "2");
 define ('USER_FUNCIONARIO', "3");
 define ('USER_COMUM', "4");
+define ('NEW_COMPANY', 1);
 define ('APP_NAME', 'AGENDAMINT'); // nome será alterado em todo lugar que houver o nome da empresa

@@ -20,7 +20,7 @@ li{
     margin: 130px auto;
     height: 100px;
 }
-.btn-entrar{
+.btn-entrar, .btn-cadastro{
     margin-top: 8px;
     width: 100%;
 }
@@ -87,4 +87,9 @@ li{
 }
 .panel-body thead{
     position: relative;
+}
+.frm_cad_initial{
+    width: 530px;
+    margin: 130px auto;
+    height: 100px;
 }

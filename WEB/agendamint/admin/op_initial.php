@@ -1,0 +1,3 @@
+<?php
+
+    $company = new Empresa();

@@ -24,7 +24,8 @@
             if(count($funcionarioLogin) > 0){
                 $empresa        = new Empresa();
                 $statusEmpresa  = $empresa->getById($funcionarioLogin[0]['empresa_id']);
-                if($statusEmpresa[0]['nova'] == 0){
+
+                if($statusEmpresa[0]['nova'] == 0 || $funcionarioLogin[0]['nivel_acesso_id'] == USER_MASTER){
                     return $funcionarioLogin;
                 }
             }
