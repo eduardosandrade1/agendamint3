@@ -26,39 +26,74 @@
         </div>
         <div class="frm_cad_initial">
             <label for="" class="h3">Nos informe:</label>
-            <form action="op_initial.php">
-                <div class="form-group">
-                    <label for="">O tipo de chave pix que deseja cadastrar:</label>
-                    <select name="" id="" class="form-control">
-                        <option value="">------ SELECIONE ------</option>
-                        <option value="1">Email</option>
-                        <option value="2">Cpf</option>
-                        <option value="3">Telefone</option>
-                        <option value="4">Chave aleatórioa</option>
-                    </select>
+            <form action="op_initial.php" method="POST">
+                <!-- primeira parte -->
+                <div class="first-party">
+                    <div class="form-group">
+                        <label for="">O tipo de chave pix que deseja cadastrar:</label>
+                        <select name="tipo_chave_pix" id="" class="form-control">
+                            <option value="">------ SELECIONE ------</option>
+                            <option value="1">Email</option>
+                            <option value="2">CPF</option>
+                            <option value="3">Telefone</option>
+                            <option value="4">Chave aleatórioa</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Informe a chave:</label>
+                        <input type="text" name="chave_pix" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Nos diga qual é o banco:</label>
+                        <select name="nome-banco" class="form-control" id="">
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary btn-next pull-right">Próximo</button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="">Informe a chave:</label>
-                    <input type="text" class="form-control">
+
+                <!-- segunda parte  -->
+                <div class="second-party" style="display:none">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary btn-voltar">Voltar</button>
+                    </div>
+                    <div class="group">
+                        <div class="form-group">
+                            <label for="">Cor primária:</label>
+                            <input type="color" class="form-control form-control-color" name="primary-color">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Cor secundária:</label>
+                            <input type="color" class="form-control form-control-color" name="second-color">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Cor terciária:</label>
+                            <input type="color" class="form-control form-control-color" name="tertiary-color">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Seu email corporativo:</label>
+                            <input type="text" class="form-control" name="email-coorporativo">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-cadastro">Enviar</button>
+                        </div>
+                    </div>
+
+
                 </div>
-                <div class="form-group">
-                    <label for="">Nos diga qual é o banco:</label>
-                    <input type="text" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="">Cor primária:</label>
-                    <input type="color" class="form-control form-control-color">
-                </div>
-                <div class="form-group">
-                    <label for="">Seu email corporativo:</label>
-                    <input type="text" class="form-control">
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-cadastro">Enviar</button>
-                </div>
+
             </form>
             
         </div>
     </div>
+    <script src="../admin/js/actions.js"></script>
+    <script>
+        $(document).ready(function () { 
+            // var $seuCampoCpf = $("input[name=func-new-cpf]");
+            // $seuCampoCpf.mask('000.000.000-00', {reverse: true});
+        });
+    </script>
 </body>
 </html>

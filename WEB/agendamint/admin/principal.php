@@ -8,7 +8,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php if($_SESSION['new_empresa'] != NEW_COMPANY){ ?>
+<?php if($_SESSION['new_empresa'] == NEW_COMPANY){ ?>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

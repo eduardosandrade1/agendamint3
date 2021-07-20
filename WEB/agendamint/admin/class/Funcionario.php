@@ -24,8 +24,9 @@
             if(count($funcionarioLogin) > 0){
                 $empresa        = new Empresa();
                 $statusEmpresa  = $empresa->getById($funcionarioLogin[0]['empresa_id']);
-
-                if($statusEmpresa[0]['nova'] == 0 || $funcionarioLogin[0]['nivel_acesso_id'] == USER_MASTER){
+                // var_dump($funcionarioLogin[0]['nivel_acesso_id']);die;
+                // se for um
+                if(($statusEmpresa[0]['nova'] == NEW_COMPANY && $funcionarioLogin[0]['nivel_acesso_id'] == USER_MASTER) || ($funcionarioLogin[0]['nivel_acesso_id'] == USER_FUNCIONARIO && $statusEmpresa[0]['nova'] == NEW_COMPANY) ){
                     return $funcionarioLogin;
                 }
             }
