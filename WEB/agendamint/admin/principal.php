@@ -5,6 +5,7 @@
     }
     $niveis = new NivelUser();
     $dados['nivel_users'] = $niveis->getAll();
+    // var_dump($_SESSION);die;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -15,6 +16,7 @@
         <!-- bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <!-- jQuery -->
@@ -29,14 +31,14 @@
         <title>Área Adminstrativa</title>
 
     </head>
-    <body style="background-color:<?= $_SESSION['color_primary'] ?>">
+    <body style="background-color:<?= $_SESSION['color_secondary'] ?>">
 
         <div id="principal">
             <div id="cabecalho">
 
             </div> <!-- final do cabeçalho -->
             <div id="corpo">
-                <div id="esquerdo">
+                <div id="esquerdo" style="background-color:<?= $_SESSION['color_primary'] ?>">
                     <!-- Menu lateral  -->
                     <?php include 'menu_lateral.php'; ?>
                 </div> <!-- final do esquerdo -->
@@ -54,7 +56,7 @@
                                 $pag[3]="frm_funcionarios.php";
                                 $pag[4]="frm_agenda.php";
                                 $pag[5]="frm_servico.php";
-                                $pag[6]="frm_noticia.php";
+                                $pag[6]="frm_empresa.php";
                                 $pag[7]="lista_noticia.php";
                                 $pag[8]="frm_administrador.php";
                                 $pag[9]="lista_administrador.php";

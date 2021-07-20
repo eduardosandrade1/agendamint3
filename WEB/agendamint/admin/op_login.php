@@ -18,6 +18,7 @@
         $_SESSION['nome']           = $users[0]['nome'];
         $_SESSION['nivel_acesso']   = $users[0]['nivel_acesso_id'];
         $_SESSION['empresa_id']     = $users[0]['empresa_id'];
+        $_SESSION['dados_empresa']   = $company->getById($users[0]['empresa_id']);
         $_SESSION['new_empresa']    = $company->getById($users[0]['empresa_id'])[0]['nova'];
         // var_dump($company->getById($users[0]['empresa_id'])[0]['nova']);die;
         $_SESSION['color_primary']  = $company->getById($users[0]['empresa_id'])[0]['cor_primaria'];

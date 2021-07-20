@@ -18,8 +18,17 @@ $(document).ready(function(){
             $('select[name=nome-banco]').append(
                 '<option value="'+element.label+'">'+element.label+'</option>'
             );
-            console.log(element.label)
         });
-        
     })
+    // Clear Previous QR Code
+    $('#qrcode').empty();
+    // Set Size to Match User Input
+    $('#qrcode').css({
+        'width' : $('.qr-size').val(),
+        'height' : $('.qr-size').val()
+    })
+
+    // Generate and Output QR Code
+    $('#qrcode').qrcode({width: 90,height: 90,text: 'youtube.com.br'});
+
 })

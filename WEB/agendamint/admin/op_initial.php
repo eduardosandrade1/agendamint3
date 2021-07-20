@@ -22,7 +22,11 @@
         ':nova'             => 1
     ));
     if($cmd){
-        $_SESSION['new_empresa'] = NEW_COMPANY;
+        $_SESSION['new_empresa']        = NEW_COMPANY;
+        $_SESSION['color_primary']      = $primary;
+        $_SESSION['color_secondary']    = $second;
+        $_SESSION['color_tertiary']     = $terty;
+        $_SESSION['dados_empresa']      = $company->getById($_SESSION['empresa_id']);
     }
     header("location: principal.php?link=1");
     // var_dump($cmd);die;

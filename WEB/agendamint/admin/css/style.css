@@ -93,3 +93,7 @@ li{
     margin: 130px auto;
     height: 100px;
 }
+.footer-menu-lateral{
+    position: absolute;
+    bottom: 15px;
+}
