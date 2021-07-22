@@ -18,6 +18,7 @@
                     <th class="text-center" scope="col">Cliente</th>
                     <th class="text-center" scope="col">Data</th>
                     <th class="text-center" scope="col">Serviço</th>
+                    <th class="text-center" scope="col">Preço</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,6 +45,7 @@
                         <td class="text-center"><?= $usuario->getById($agenda['usuario_id'])[0]['nome'] ?></td>
                         <td class="text-center <?= $colorDate ?>"><?= $agenda['data_marcada'] ?></td>
                         <td class="text-center"><?= $servicos->getById($agenda['servico_id'])[0]['descricao'] ?></td>
+                        <td class="text-center">R$ <?=  number_format($servicos->getById($agenda['servico_id'])[0]['valor'], 2, ',', '.') ?></td>
                     </tr>
                 <?php } ?>
             </tbody>

@@ -1,6 +1,27 @@
-<?php 
-    $chave = $_SESSION['dados_empresa'][0]['chave_pix'];
-    $email = $_SESSION['dados_empresa'][0]['email'];
+<?php
+
+    use chillerlan\QRCode\QRCode;
+    include './vendor/autoload.php';
+
+    $chave     = $_SESSION['dados_empresa'][0]['chave_pix'];
+    $email     = $_SESSION['dados_empresa'][0]['email'];
+
+    $obPayload = new Payload;
+    $obPayload->setPixKey('46530022821');
+    $obPayload->setDescription('teste payload');
+    $obPayload->setMerchantName('Eduardo Andrade');
+    $obPayload->serMerchantCity('SAO PAULO');
+    $obPayload->setAmout(20.00);
+    $obPayload->setTxId('tst1');
+    
+
+    $payloadQrCode = $obPayload->getPayload();
+
+
+    // quick and simple:
+    echo '<img src="'.(new QRCode)->render($payloadQrCode).'" alt="QR Code" />';
+    
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

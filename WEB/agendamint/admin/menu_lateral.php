@@ -1,17 +1,18 @@
 <div id="home">
     <div class="h4 link-sidebar">
-        <a href="principal.php?link=1">Home</a>
+        <a href="principal.php?link=1"><i class="bi bi-house-door"></i> Home</a>
     </div>
+    <br><br>
 </div>
 <div id="sessao">
     <?php if($_SESSION['nivel_acesso'] == USER_FUNCIONARIO){ ?>
         <h4>Cadastrar</h4>
         <ul>
-            <li><a class="h5" href="principal.php?link=2">Usuário</a></li>
+            <li><a class="h5" href="principal.php?link=2"><i class="bi bi-person-plus"></i> Clientes</a></li>
         </ul>
         <h4>Visualizar</h4>
         <ul>
-            <li><a class="h5" href="principal.php?link=4">Sua agenda</a></li>
+            <li><a class="h5" href="principal.php?link=4"><i class="bi bi-calendar-week"></i> Sua agenda</a></li>
         </ul>
     <?php } ?>
     <?php if($_SESSION['nivel_acesso'] == USER_MASTER){ ?>

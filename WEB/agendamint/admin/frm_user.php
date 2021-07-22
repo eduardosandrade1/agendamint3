@@ -30,8 +30,16 @@
                         <td class="text-center"><?= $users[$key]['nome'] ?></td>
                         <td class="text-center"><?= $users[$key]['email'] ?></td>
                         <td class="text-center"><?= $users[$key]['login'] ?></td>
-                        <td class="text-center"><a href="#">Editar</a></td>
-                        <td class="text-center"><a href="#">Excluir</a></td>
+                        <td class="text-center">
+                            <button class="btn btn-default btn-edit btn-xs" data-toggle="modal" data-target="#modalEditUser">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                        </td>
+                        <td class="text-center">
+                            <button class="btn btn-default btn-delete btn-xs">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
                     </tr>
                 <?php } ?>
             </tbody>
@@ -39,3 +47,4 @@
     </div>
 </div>
 <?php include 'modals/novo_user.php'; ?>
+<?php include 'modals/edit_usuario.php'; ?>

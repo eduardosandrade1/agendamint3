@@ -1,8 +1,10 @@
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<?php  ?>
+
+<div class="modal fade" id="modalEditUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="h4">Novo usuário</div>
+        <div class="h4">Editar usuário</div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -16,23 +18,13 @@
             </div>
             <!-- usuário/login do usuário -->
             <div class="form-group">
-                <label for="message-text" class="col-form-label">Usuario:</label>
+                <label for="message-text" class="col-form-label">Usuario/login:</label>
                 <input class="form-control" name="user-new-user" required>
             </div>
             <!-- email -->
             <div class="form-group">
                 <label for="message-text" class="col-form-label">Email:</label>
                 <input class="form-control" name="email-new-user" required>
-            </div>
-            <!-- senha -->
-            <div class="form-group">
-                <label for="message-text" class="col-form-label">Senha:</label>
-                <input type="password" class="form-control" name="senha-new-user" required>
-            </div>    
-            <!-- repetição de senha -->
-            <div class="form-group">
-                <label for="message-text" class="col-form-label">Repita senha:</label>
-                <input type="password" class="form-control" name="senha-repita-new-user" required>
             </div>
             <!-- opção de serviço -->
             <div class="form-group">
@@ -56,7 +48,7 @@
             </div>
             <!-- send the form -->
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" class="btn btn-primary">Atualizar</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
             </div>
         </form>
