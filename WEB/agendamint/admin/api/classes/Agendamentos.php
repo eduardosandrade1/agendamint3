@@ -1,12 +1,12 @@
 <?php
 
-	class Usuarios
+	class Agendamentos
 	{
-		public function mostrar()
+		public function mostrarTodos()
 		{
 			$con = new PDO('mysql: host=locahost; dbname=estacionamint;','root','usbw');
 
-			$sql = "SELECT * FROM usuarios ORDER BY id ASC";
+			$sql = "SELECT * FROM agendamentos ORDER BY id ASC";
 			$sql = $con->prepare($sql);
 			$sql->execute();
 
@@ -17,7 +17,7 @@
 			}
 
 			if (!$resultados) {
-				throw new Exception("Nenhum pruduto no estoque!");
+				throw new Exception("testeteset!");
 			}
 			
 			return $resultados;

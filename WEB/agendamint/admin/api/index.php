@@ -2,6 +2,7 @@
 
     header('Content-Type: application/json; charset=utf-8');
     include './classes/Usuarios.php';
+    include './classes/Funcionarios.php';
 
     class Rest 
     {
