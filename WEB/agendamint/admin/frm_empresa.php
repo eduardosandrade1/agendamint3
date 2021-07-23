@@ -43,7 +43,6 @@
     <title>Cadastro</title>
 </head>
 <body>
-    <div id="qrcode" class="pull-right"></div>
     <div class="content">
         <div class="header text-center">
             <h1>Editar dados da empresa</h1>

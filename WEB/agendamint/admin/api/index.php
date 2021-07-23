@@ -1,8 +1,8 @@
 <?php
 
     header('Content-Type: application/json; charset=utf-8');
-    include './classes/Usuarios.php';
-    include './classes/Funcionarios.php';
+    
+    include '../api/config.php';
 
     class Rest 
     {
@@ -41,7 +41,5 @@
     }
     
     if(isset($_REQUEST)){
-        echo "<pre>";
         echo Rest::open($_REQUEST);
-        echo "<pre>";
     }
