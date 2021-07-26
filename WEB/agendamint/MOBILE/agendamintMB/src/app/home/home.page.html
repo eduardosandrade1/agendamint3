@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Entrar na conta
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Entrar na conta</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <ion-item>
+      <ion-label>
+        Login
+      </ion-label>
+      <ion-input [(ngModel)]="user"></ion-input>
+    </ion-item>
+    <!-- senha -->
+    <ion-item>
+      <ion-label>
+        Senha 
+      </ion-label>
+      <ion-input type="password" [(ngModel)]="senha" ></ion-input>
+    </ion-item>
+
+    <!-- button entrar -->
+
+    <ion-button expand="block" (click)="login()">Entrar</ion-button>    
+  </div>
+  
+  <div class="msg">
+    <ion-label>{{ msg }}</ion-label>
+    
+  </div>
+
+</ion-content>

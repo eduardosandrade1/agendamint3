@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    <ion-title>Horários</ion-title>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let horario of horarios">
+    <ion-label>{{ horarios.data_marcada }}</ion-label>
+  </ion-item>
+</ion-content>

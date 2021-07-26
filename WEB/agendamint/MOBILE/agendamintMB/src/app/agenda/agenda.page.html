@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="menu-bar">
+      <ion-label class="label">Bem vindo {{ nome }}</ion-label>
+      
+      <ion-icon name="power-outline" (click)="logout()"></ion-icon>      
+    </div>
+
+    <!-- botao sair  -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>
+<ion-footer>
+  <div class="bottom footer">
+    <ion-button slot="end" (click)="listaHorarios()">
+      <ion-icon slot="start" name="calendar" ></ion-icon> Agenda
+    </ion-button>
+  </div>
+</ion-footer>
