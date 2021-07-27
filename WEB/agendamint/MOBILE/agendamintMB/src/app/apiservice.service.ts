@@ -22,5 +22,13 @@ export class ApiserviceService {
     horariosByCliente(idCliente){
       return this.http.get('http://localhost/agendamint3/WEB/agendamint/admin/api/agendamentos/getByCliente/'+idCliente);
     }
+
+    solicitarAgendamento(idFuncionario:string, idUsuario:string, servico:string, horario:string){
+      return this.http.get('http://localhost/agendamint3/WEB/agendamint/admin/api/agendamentos/agendar/'+idFuncionario+"/"+idUsuario+"/"+horario+"/"+servico+"/");
+    }
+
+    getFuncionariosByCompany(idCompany:string){
+      return this.http.get('http://localhost/agendamint3/WEB/agendamint/admin/api/funcionarios/getByCompany/'+idCompany);
+    }
     
 }

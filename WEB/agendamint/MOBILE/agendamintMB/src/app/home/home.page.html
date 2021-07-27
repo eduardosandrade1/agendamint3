@@ -30,12 +30,10 @@
 
     <!-- button entrar -->
 
-    <ion-button expand="block" (click)="login()">Entrar</ion-button>    
+    <ion-button expand="block" (click)="presentLoading()">Entrar</ion-button>    
   </div>
-  
-  <div class="msg">
-    <ion-label>{{ msg }}</ion-label>
-    
+  <div class="msg border-danger" *ngIf="msg.success == false">
+    <ion-label class="danger">{{ msg.text }}</ion-label>
   </div>
 
 </ion-content>

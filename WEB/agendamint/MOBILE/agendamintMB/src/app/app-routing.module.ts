@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'horarios',
     loadChildren: () => import('./horarios/horarios.module').then( m => m.HorariosPageModule)
   },
+  {
+    path: 'solicitar',
+    loadChildren: () => import('./solicitar/solicitar.module').then( m => m.SolicitarPageModule)
+  },
 ];
 
 @NgModule({

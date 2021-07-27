@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ApiserviceService } from '../apiservice.service';
 // import 'rxjs/add/operator/map';
 
 @Component({
@@ -9,13 +8,14 @@ import { ApiserviceService } from '../apiservice.service';
   styleUrls: ['./agenda.page.scss'],
 })
 export class AgendaPage implements OnInit {
-  nome : string = JSON.parse(localStorage.getItem('dados'))[0]['nome'];
+  nome : string = "";
 
   constructor(
     private route : Router
   ) { }
 
   ngOnInit() {
+    this.nome = JSON.parse(localStorage.getItem('nome'));
   }
 
   logout(){

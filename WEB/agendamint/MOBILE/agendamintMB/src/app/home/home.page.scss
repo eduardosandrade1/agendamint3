@@ -1,3 +1,28 @@
 .container {
   margin-top: 200px;
 }
+div.msg{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 30px 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 7px;
+}
+.success{
+  color: #28A745
+}
+.danger{
+  color: #DC3545;
+}
+
+.border-danger{
+  border: solid 1px #DC3545;
+  background-color: #ff637277;
+}
+
+.border-success{
+  border: solid 1px #28A745;
+  border: solid 1px #55f079c9;
+}

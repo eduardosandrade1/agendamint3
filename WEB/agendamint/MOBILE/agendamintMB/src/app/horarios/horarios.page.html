@@ -9,7 +9,30 @@
 </ion-header>
 
 <ion-content>
-  <ion-item *ngFor="let horario of horarios">
-    <ion-label>{{ horarios.data_marcada }}</ion-label>
+  <ion-header>
+   <ion-grid *ngIf="horarios">
+     <ion-row>
+       <ion-col>Data</ion-col>
+       <ion-col>Serviço</ion-col>
+       <ion-col>Preço</ion-col>
+     </ion-row>
+   </ion-grid>
+  </ion-header>
+  <ion-list>
+    <ion-grid *ngIf="horarios">
+      <ion-row>
+        <ion-col (click)="showMoreInfos()">{{ dataMarcada }}</ion-col>
+        <ion-col>{{ horarios.nome_servico }}</ion-col>
+        <ion-col>{{ valorFormatado }}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+
+  <ion-item *ngIf="!horarios">
+    <ion-label>Não há horários</ion-label>
+    <ion-button (click)="solicitar()">
+      Solicitar
+    </ion-button>
   </ion-item>
+
 </ion-content>
