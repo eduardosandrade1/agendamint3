@@ -34,26 +34,7 @@
                 <label for="message-text" class="col-form-label">Repita senha:</label>
                 <input type="password" class="form-control" name="senha-repita-new-user" required>
             </div>
-            <!-- opção de serviço -->
-            <div class="form-group">
-              <label for="message-text" class="col-form-label"></label>
-              <select name="servico-new-user" class="form-control">
-                <?php foreach ($servicos as $s => $serv) {?>
-                  <option value="<?= $serv['id'] ?>"><?= $serv['descricao'] ?></option>
-                <?php } ?>
-              </select>
-            </div>
-          <!-- data agendamento -->
-            <div class="row">
-              <div class="col">
-                <label for="message-text" class="col-form-label">Dia para agendamento:</label>
-                <input type="date" class="form-control" name="dia-new-user" required>
-              </div>
-              <div class="col">
-                <label for="message-text" class="col-form-label">Horário:</label>
-                <input type="time" class="form-control" name="hora-new-user" required>
-              </div>
-            </div>
+            
             <!-- send the form -->
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary">Cadastrar</button>

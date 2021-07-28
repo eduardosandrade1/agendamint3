@@ -20,11 +20,14 @@
   </ion-header>
   <ion-list>
     <ion-grid *ngIf="horarios">
-      <ion-row>
-        <ion-col (click)="showMoreInfos()">{{ dataMarcada }}</ion-col>
-        <ion-col>{{ horarios.nome_servico }}</ion-col>
-        <ion-col>{{ valorFormatado }}</ion-col>
-      </ion-row>
+      <ion-item *ngFor="let horarios of horario">
+        <ion-row>
+          <ion-col (click)="showMoreInfos()">{{ dataMarcada }}</ion-col>
+          <ion-col>{{ horario[0]['data_marcada'] }}</ion-col>
+          <ion-col>{{ valorFormatado }}</ion-col>
+        </ion-row>        
+      </ion-item>
+
     </ion-grid>
   </ion-list>
 

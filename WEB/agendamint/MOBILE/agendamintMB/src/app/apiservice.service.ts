@@ -4,7 +4,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiserviceService {
-  headers: HttpHeaders;
+  headers : HttpHeaders;
+  serve : string = "http://localhost/study/agendamint3/WEB/agendamint/admin/api/";
   constructor(
     private http: HttpClient
   ) {
@@ -16,19 +17,19 @@ export class ApiserviceService {
   }
 
     doLogin(user, senha){
-      return this.http.get('http://localhost/agendamint3/WEB/agendamint/admin/api/usuarios/login/'+user+'/'+senha);
+      return this.http.get(this.serve+'usuarios/login/'+user+'/'+senha);
     }
 
     horariosByCliente(idCliente){
-      return this.http.get('http://localhost/agendamint3/WEB/agendamint/admin/api/agendamentos/getByCliente/'+idCliente);
+      return this.http.get(this.serve+'agendamentos/getByCliente/'+idCliente);
     }
 
     solicitarAgendamento(idFuncionario:string, idUsuario:string, servico:string, horario:string){
-      return this.http.get('http://localhost/agendamint3/WEB/agendamint/admin/api/agendamentos/agendar/'+idFuncionario+"/"+idUsuario+"/"+horario+"/"+servico+"/");
+      return this.http.get(this.serve+'agendamentos/agendar/'+idFuncionario+"/"+idUsuario+"/"+horario+"/"+servico+"/");
     }
 
     getFuncionariosByCompany(idCompany:string){
-      return this.http.get('http://localhost/agendamint3/WEB/agendamint/admin/api/funcionarios/getByCompany/'+idCompany);
+      return this.http.get(this.serve+'funcionarios/getByCompany/'+idCompany);
     }
     
 }

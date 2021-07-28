@@ -36,6 +36,7 @@ export class HomePage {
     this.service.doLogin(this.user, this.senha).subscribe((res:any) => {
 
       const result = res.dados[0];
+      console.log(result)
       if(result){
         localStorage.setItem('id', JSON.stringify(result['id']));
         localStorage.setItem('nome', JSON.stringify(result['nome']));

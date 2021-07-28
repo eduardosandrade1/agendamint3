@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiserviceService } from '../apiservice.service';
 import { AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-horarios',
@@ -15,7 +16,8 @@ export class HorariosPage implements OnInit {
   horarioMarcado : string;
   constructor(
     private service : ApiserviceService,
-    private alerta : AlertController
+    private alerta : AlertController,
+    private route : Router
   ) { }
 
   ngOnInit() {
@@ -25,6 +27,8 @@ export class HorariosPage implements OnInit {
   getHorarios(){
     this.service.horariosByCliente(this.idCliente).subscribe((res : any ) => {
       this.horarios = res.dados[0];
+      console.log(res);
+      
       if(this.horarios){
         this.valorFormatado = parseFloat(res.dados[0].valor_servico)
         this.valorFormatado = this.valorFormatado.toLocaleString('pt-BR', {
@@ -47,7 +51,7 @@ export class HorariosPage implements OnInit {
   }
 
 
-
+  // alert
   async presentAlert(title:string, subtitle:string, msg:string) {
     const alert = await this.alerta.create({
       cssClass: 'my-custom-class',
@@ -61,7 +65,7 @@ export class HorariosPage implements OnInit {
   }
 
   solicitar(){
-    // this.service.solicitarAgendamento()
+    this.route.navigate(['solicitar']);
   }
 
 }

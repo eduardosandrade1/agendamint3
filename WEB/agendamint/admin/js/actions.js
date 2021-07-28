@@ -13,7 +13,6 @@ $(document).ready(function(){
     let url   = baseUrl;
 
     $.get(url+'/WEB/agendamint/admin/bancos.json', function(result){
-        console.log(result)
         result.forEach(element => {
             $('select[name=nome-banco]').append(
                 '<option value="'+element.label+'">'+element.label+'</option>'
