@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ApiserviceService {
   headers : HttpHeaders;
-  serve : string = "http://localhost/study/agendamint3/WEB/agendamint/admin/api/";
+  serve : string = "http://localhost/agendamint3/WEB/agendamint/admin/api/";
   constructor(
     private http: HttpClient
   ) {

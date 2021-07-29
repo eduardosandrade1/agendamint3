@@ -21,6 +21,7 @@
             $sql  = new Sql();
             $funcionarioLogin = $sql->select("SELECT * FROM funcionarios where login = :login and senha = :senha", array(':login' => $user, ':senha' => $senha_));
             // PEGA FUNCIONARIOS DE EMPRESAS ATIVAS/CONFIGURADAS
+            var_dump($funcionarioLogin);die;
             if(count($funcionarioLogin) > 0){
                 $empresa        = new Empresa();
                 $statusEmpresa  = $empresa->getById($funcionarioLogin[0]['empresa_id']);

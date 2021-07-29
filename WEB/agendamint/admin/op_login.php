@@ -10,6 +10,7 @@
     // var_dump($_POST);die;
 
     $users = $login->getSpecificFuncionario($user, $senha);
+    var_dump($users);die;
     // var_dump($users);
     // die;
     if(count($users) > 0){

@@ -1,5 +1,7 @@
 {
   "name": "agendamintMB",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

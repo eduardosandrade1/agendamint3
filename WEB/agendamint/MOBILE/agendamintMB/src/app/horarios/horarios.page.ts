@@ -27,7 +27,6 @@ export class HorariosPage implements OnInit {
   getHorarios(){
     this.service.horariosByCliente(this.idCliente).subscribe((res : any ) => {
       this.horarios = res.dados[0];
-      console.log(res);
       
       if(this.horarios){
         this.valorFormatado = parseFloat(res.dados[0].valor_servico)
