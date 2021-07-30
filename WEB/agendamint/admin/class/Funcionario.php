@@ -21,13 +21,18 @@
             $sql  = new Sql();
             $funcionarioLogin = $sql->select("SELECT * FROM funcionarios where login = :login and senha = :senha", array(':login' => $user, ':senha' => $senha_));
             // PEGA FUNCIONARIOS DE EMPRESAS ATIVAS/CONFIGURADAS
-            var_dump($funcionarioLogin);die;
+            // var_dump($funcionarioLogin);die;
             if(count($funcionarioLogin) > 0){
                 $empresa        = new Empresa();
                 $statusEmpresa  = $empresa->getById($funcionarioLogin[0]['empresa_id']);
                 // var_dump($funcionarioLogin[0]['nivel_acesso_id']);die;
-                // se for um
-                if(($statusEmpresa[0]['nova'] == NEW_COMPANY && $funcionarioLogin[0]['nivel_acesso_id'] == USER_MASTER) || ($funcionarioLogin[0]['nivel_acesso_id'] == USER_FUNCIONARIO && $statusEmpresa[0]['nova'] == NEW_COMPANY) ){
+                if(($statusEmpresa[0]['nova'] == NEW_COMPANY && $funcionarioLogin[0]['nivel_acesso_id'] == USER_MASTER 
+                    ||
+                    $statusEmpresa[0]['nova'] != NEW_COMPANY 
+                    && 
+                    $funcionarioLogin[0]['nivel_acesso_id'] == USER_MASTER) 
+                    || 
+                  ($funcionarioLogin[0]['nivel_acesso_id'] == USER_FUNCIONARIO && $statusEmpresa[0]['nova'] == NEW_COMPANY) ){
                     return $funcionarioLogin;
                 }
             }
